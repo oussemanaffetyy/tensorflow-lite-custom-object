@@ -9,6 +9,7 @@ while cpt < maxFrames:
     ret, frame = cap.read()
     flipped=cv2.flip(frame,flipCode=-1)
     frame=cv2.resize(flipped,(640,480))
+    ////////////
     cv2.imshow("test window", frame) # show image in window
     cv2.imwrite("/home/pi/images/A_%d.jpg" %cpt, frame)
     time.sleep(0.5)
